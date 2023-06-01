@@ -41,29 +41,30 @@ class Universitas:
             print("Nama Jurusan:", jurusan.nama_jurusan)
 
 
-# Contoh penggunaan program
+### Buatlah sebuah objek Universitas dengan nama "XYZ University".
+
+universitas_xyz = Universitas("XYZ University")
+
+### Buatlah objek Jurusan dengan nama "Teknik Informatika" dan tambahkan objek tersebut ke dalam Universitas XYZ. 
 
 # Membuat objek jurusan
 jurusan_ti = Jurusan("Teknik Informatika")
-jurusan_tk = Jurusan("Teknik Komputer")
+
+# Menambahkan objek jurusan ke dalam objek universitas
+universitas_xyz.tambah_jurusan(jurusan_ti)
+
+### Buatlah objek Mahasiswa dengan nama "Kalian masing", NIM "Kalian masing", dan masukkan ke dalam Jurusan Teknik Informatika di Universitas XYZ.
 
 # Membuat objek mahasiswa
-mahasiswa1 = Mahasiswa("Andi", "123456", jurusan_ti)
-mahasiswa2 = Mahasiswa("Budi", "789012", jurusan_ti)
-mahasiswa3 = Mahasiswa("Cindy", "345678", jurusan_tk)
+mahasiswa_kalian = Mahasiswa("Kalian masing", "Kalian masing", jurusan_ti)
 
-# Menambahkan mahasiswa ke dalam daftar mahasiswa pada jurusan
-jurusan_ti.tambah_mahasiswa(mahasiswa1)
-jurusan_ti.tambah_mahasiswa(mahasiswa2)
-jurusan_tk.tambah_mahasiswa(mahasiswa3)
+# Menambahkan objek mahasiswa ke dalam objek jurusan
+jurusan_ti.tambah_mahasiswa(mahasiswa_kalian)
 
-# Membuat objek universitas
-universitas_xyz = Universitas("XYZ")
-universitas_xyz.tambah_jurusan(jurusan_ti)
-universitas_xyz.tambah_jurusan(jurusan_tk)
-
-# Menampilkan informasi mahasiswa dan jurusan
-jurusan_ti.tampilkan_daftar_mahasiswa()
-jurusan_tk.tampilkan_daftar_mahasiswa()
+### Tampilkan daftar jurusan yang ada di Universitas XYZ.
 
 universitas_xyz.tampilkan_daftar_jurusan()
+
+### Tampilkan daftar mahasiswa yang terdaftar dalam Jurusan Teknik Informatika di Universitas XYZ.
+
+jurusan_ti.tampilkan_daftar_mahasiswa()
